@@ -1,0 +1,4 @@
+{
+	"unencrypted_password": ".*password:? .+",
+	"unencrypted_secret": "(?i).*secret.* value=.+"
+}
