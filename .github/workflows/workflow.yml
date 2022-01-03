@@ -1,0 +1,25 @@
+name: ENV variable scanner
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  env-scanner:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - id: outputStep
+      run: echo "::set-output name=base_commit::$(git rev-parse refs/remotes/origin/${{ github.base_ref }})"
+    - run: echo ${{steps.outputStep.outputs.base_commit}}
+    - run: git log
+    - name: checking out target ref
+      if: github.head_ref
+      run: git checkout ${{github.head_ref}}
+    - name: Trufflehog Check
+      uses: edplato/trufflehog-actions-scan@master
+      with:
+        scanArguments: "--since_commit ${{steps.outputStep.outputs.base_commit}} --regex -i include-paths.txt  --allow allow.json --rules rules.json"

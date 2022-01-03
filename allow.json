@@ -1,0 +1,5 @@
+{
+  "encrypt_secret": "regex:.*secret.* value=\"DECRYPT\\[atom.+",
+  "encrypt_password": "regex:password: DECRYPT\\[atom.*",
+  "encrypt_keys": "regex:DECRYPT\\[atom.*"
+}

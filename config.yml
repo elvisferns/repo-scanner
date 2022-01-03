@@ -1,0 +1,13 @@
+---
+  services:
+    db:
+      host: amazonaws.com
+      database: db
+      tableName: table
+      user: user
+      password: d4m94nUb5nsKeEHonuhqDD74dDmB1NDJDNCdidsnecndf
+  logging:
+    stdout:
+      enabled: true
+      level: debug
+  env: qa

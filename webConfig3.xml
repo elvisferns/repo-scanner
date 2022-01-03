@@ -1,0 +1,6 @@
+<test>
+  <add key="secret1" value="Uicwii4GGhtifktrfEbghdSQhDefake" />
+  <add key="secret2" value="6X7tkH5GhnFjkdrjVr6bRCkfake" />
+  <add key="jwt.auth.secret" value="555AB11CCA08EED9B1ERFDSDJRN45KDRHA4EKAF35BN5923FGAED6739CCB451" />
+  <add key="ihp.secretkey" value="DECRYPT[atom\\eyvG56QDkcdjrtdekafczn7bA6m]" />
+</test>
